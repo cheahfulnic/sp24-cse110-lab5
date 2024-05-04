@@ -6,7 +6,7 @@ function init() {
   // TODO
   let dropdown = document.getElementById("horn-select");
   let imageHorn = document.querySelector('img[src="assets/images/no-image.png"]');
-  let audio = document.getElementsByClassName("hidden");
+  let audio = document.getElementsByClassName("hidden")[0];
 
   dropdown.addEventListener('change', function() {
     let selected = dropdown.options[dropdown.selectedIndex].value;
@@ -39,5 +39,5 @@ function init() {
     if (selected == "party-horn") {
       jsConfetti.addConfetti();
     }
-  })
+  });
 }
