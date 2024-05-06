@@ -31,10 +31,14 @@ function init() {
   speak.addEventListener('click', function() {
     let utterance = new SpeechSynthesisUtterance(text.value);
     utterance.voice = voices[dropdown.selectedIndex];
+    face.src = "./assets/images/smiling-open.png"
     synth.speak(utterance);
-    while (synth.speaking) {
-      face.src = "./assets/images/smiling-open.png";
-    }
-    face.src = "./assets/images/smiling.png"
   });
+  
+  let interval = setInterval(function() {
+    if (!synth.speaking) {
+      face.src = "./assets/images/smiling.png";
+      clearInterval(interval);
+    }
+  }, 100);
 }
