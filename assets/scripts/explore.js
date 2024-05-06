@@ -31,7 +31,7 @@ function init() {
   speak.addEventListener('click', function() {
     let utterance = new SpeechSynthesisUtterance(text.value);
     utterance.voice = voices[dropdown.selectedIndex];
-    face.src = "./assets/images/smiling-open.png"
+    face.src = "./assets/images/smiling-open.png";
     synth.speak(utterance);
     let interval = setInterval(function() {
       if (!synth.speaking) {
