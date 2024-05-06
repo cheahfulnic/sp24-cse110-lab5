@@ -32,7 +32,7 @@ function init() {
     let utterance = new SpeechSynthesisUtterance(text.value);
     utterance.voice = voices[dropdown.selectedIndex];
     synth.speak(utterance);
-    while (synth.speaking()) {
+    while (synth.speaking) {
       face.src = "./assets/images/smiling-open.png";
     }
     face.src = "./assets/images/smiling.png"
