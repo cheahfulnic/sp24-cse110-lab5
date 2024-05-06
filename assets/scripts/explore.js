@@ -33,12 +33,11 @@ function init() {
     utterance.voice = voices[dropdown.selectedIndex];
     face.src = "./assets/images/smiling-open.png"
     synth.speak(utterance);
+    let interval = setInterval(function() {
+      if (!synth.speaking) {
+        face.src = "./assets/images/smiling.png";
+        clearInterval(interval);
+      }
+    }, 100);
   });
-  
-  let interval = setInterval(function() {
-    if (!synth.speaking) {
-      face.src = "./assets/images/smiling.png";
-      clearInterval(interval);
-    }
-  }, 100);
 }
