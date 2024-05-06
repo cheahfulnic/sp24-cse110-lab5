@@ -5,7 +5,7 @@ window.addEventListener('DOMContentLoaded', init);
 function init() {
   // TODO
   const synth = window.speechSynthesis;
-  let voices = synth.getVoices()
+  let voices = synth.getVoices();
   let dropdown = document.getElementById("voice-select");
 
   for (let i = 0; i < voices.length; i++) {
