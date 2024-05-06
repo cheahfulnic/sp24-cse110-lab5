@@ -10,7 +10,7 @@ function init() {
   function loadVoices() {
     let voices = synth.getVoices();
     for (let i = 0; i < voices.length; i++) {
-      let voice = voices[index];
+      let voice = voices[i];
       let option = document.createElement("option");
       option.value = i;
       option.textContent = voice.name;
