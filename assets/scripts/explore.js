@@ -6,9 +6,10 @@ function init() {
   // TODO
   const synth = window.speechSynthesis;
   let dropdown = document.getElementById("voice-select");
+  let voices = synth.getVoices();
 
   function loadVoices() {
-    let voices = synth.getVoices();
+    voices = synth.getVoices();
     for (let i = 0; i < voices.length; i++) {
       let voice = voices[i];
       let option = document.createElement("option");
