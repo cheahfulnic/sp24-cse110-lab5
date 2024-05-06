@@ -22,7 +22,7 @@ function init() {
 
   speak.addEventListener('click', function() {
     let utterance = new SpeechSynthesisUtterance(text.value);
-    utterance.voice = voices[dropdown.value];
+    utterance.voice = voices[dropdown.selectedIndex];
     synth.speak(utterance);
     while (synth.speaking()) {
       face.src = "./assets/images/smiling-open.png";

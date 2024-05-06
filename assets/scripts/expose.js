@@ -34,7 +34,7 @@ function init() {
   const jsConfetti = new JSConfetti();
 
   playSound.addEventListener('click', function() {
-    let selected = dropdown.options[dropdown.selectedIndex].value;
+    let selected = dropdown.value;
     audio.play();
     if (selected == "party-horn") {
       jsConfetti.addConfetti();
